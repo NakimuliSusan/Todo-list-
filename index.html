@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suzie-Javascript-todo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>My Todo list</h1>
+        <form id="new-form">
+            <input type="text" id="new-input" placeholder="Enter Todo">
+            <input type="submit" id="new-todo" value="Add Todo">
+
+        </form>
+    </header>
+    <main>
+        <section class="task-list">
+            <h2>Todos</h2>
+
+             <div id="todos">
+                <!-- added id so as to be able to target in javascript -->
+                <!--  <div class="task">
+                    <div class="content">
+                        <input type="text" class="text" value="mytodo" readonly>
+                    </div>
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">delete</button>
+                    </div>
+                </div> -->
+            </div> 
+        </section>
+    </main>
+
+    <script src="todo.js"></script>
+
+</body>
+
+</html>
