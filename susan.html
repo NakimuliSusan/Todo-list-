@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="greet">me</p>
+    <p id="result"></p>
+    <h1 class="name"></h1>
+    <h3 class="name1">Susan</h3>
+    <button  type  =  "button"  onclick  =  "document.write('Hello World!')">Click Me</button> 
+</body>
+ <script>
+    function random () {
+     document.getElementById('greet').innerHTML = 'Hello'
+
+    var x = 10;
+    var y = 20;
+    sum = x + y;
+    document.getElementById('result').innerHTML = sum
+    document.getElementsByClassName('name').innerHTML = 'hi'
+    // var x = window.prompt('Enter your name')
+    // alert('Hello ' + x)
+     
+    // Assigning to properties
+
+    let obj = {}; //properties
+    obj.name = 'Susan';
+    obj.age = 22;
+    obj.country = 'Uganda'
+
+    console.log(obj)
+    let key = obj['name']
+    let agex = obj.age;
+    console.log( agex)
+    console.log(key)
+    //desctructuring properties  extracts data from arrays 
+
+    const { name , age, country } = obj;
+    console.log(name, age , country)
+     // works in an array
+    const students = ['Susan', 'Tessa', 'Nasser', 'Rose']
+    const[one,three,two,four ] = students
+    console.log(one, two, three, four);
+
+    var var1 = 3;
+    var var2 = 4;
+    console.log("\"12\"" ,"12"> 2)
+    console.log(3 === var1, '3' === var1)
+    console.log('3' == 3) // equality
+    console.log(var1 === var2); // strictt equality
+    console.log('4' !== var1) // strict not equality
+    var  w = 3
+    console.log(--w)
+
+    //Bitwise operations
+
+    const a = 9 // 1001
+    const b = 10 //1010
+     
+    console.log(b & a)
+    console.log(a | b)
+    console.log(a ^ b)
+    console.log(~a)
+    console.log(~b)
+
+    console.log(a<< b)
+    console.log(a>>b)
+    console.log(a>>>b)
+    console.log(a>>>9216)
+
+    document.getElementsByClassName('name-1').innerHTML = 'hello Susan '
+
+var x = [0,1,2,3,4,5,6,7,8,9]
+for (var i=0; i<x.length; i++){
+    console.log(i)
+}
+
+let student = {
+    name: 'Susan',
+    className: 'AnitaB',
+    age : 22
+};
+delete student.name;
+console.log(student)
+console.log('age' in student)
+
+var today = new Date().toLocaleTimeString();
+console.log(today)
+console.log(typeof(today))
+
+let t = (today instanceof Date)? false : true;
+console.log(t)
+
+var  trees = [  'redwood'  ,  'bay'  ,  'cedar'  ,  'oak'  ,  'maple'  ]; 
+console.log('bay' in trees)
+
+var table = [{
+    name: 'Susan' , age :22
+},
+{
+    name: 'John' , age : 20
+},
+{
+    name: 'Bree' , age : 21
+}
+]
+console.table(table)
+
+var name1 = 'Susan';// Global variable  used anywhere 
+function me () {
+    console.log(name1)
+    var car = 'Toyota'; // Block variable -> used only in the scope of the function
+}
+me()
+
+function second () {
+    console.log(name)
+}
+second()
+
+var secondName = 2// camel case naming variables
+var second_name = 2 // underscore case naming variables
+const children = 34 // immutable variables
+
+var z = null 
+console.log(z)
+
+var num = [1,2,3,'4',[2]]
+console.log(num.length)
+
+console.log(num[4][0])
+
+const materials = ["Lockers", "Tables","Chairs","Computers","Television"]
+
+// for ( let  i = 0; i < materials.length; i ++){
+ 
+//   console.log(materials[i])
+//   if (i == 2){
+//     break;
+//   }
+// }
+// do while statement
+// var i = 0
+// do {
+//     console.log(materials[i])
+//     i++
+// }
+// while (i < materials.length);
+
+// while statement
+//  var p = 0;
+//  while (p < materials.length) {
+//     console.log(materials[p]);
+//     p++;
+//  }
+
+// const food = ["Chapati",  "Ugali", "ChIcken","Fish","Chips"]
+//  for (var j= 0; j < food.length; j++) {
+//     for (var i=0; i < materials.length; i++) {
+//         if (i === 2){
+//             continue;
+//         }
+//         console.log(food[j], materials[i])
+//  }
+// }
+const food = ["Chapati",  "Ugali", "Chicken","Fish","Chips"]
+outerLoop:
+ for (var j= 0; j < food.length; j++) {
+    for (var i=0; i < materials.length; i++) {
+        if (j === 1){
+            continue outerLoop;
+        }
+        console.log(food[j], materials[i])
+ }
+}
+
+for (x in materials) { // printing indices for each material
+    console.log(x)
+}
+
+for (y of materials) { // prints values for each material
+    console.log(y)
+}
+
+const persons  = {
+    name : 'John',
+    age :20,
+    height : 1.8,
+
+}
+for (prop in persons) { 
+    console.log(prop);
+}
+
+
+}
+random()
+
+function square () {
+
+    s = arguments[0] * arguments[1]
+    console.log(s);
+
+
+}
+square(2,3)
+square(3,4)
+ </script>
+</html>
